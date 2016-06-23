@@ -1,0 +1,10 @@
+#!/bin/bash
+load(){
+	echo 111
+}
+author(){
+	echo 222
+}
+desc(){
+	echo 23333
+}

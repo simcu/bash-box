@@ -1,0 +1,16 @@
+#!/bin/bash
+BASH_BOX_VERSION=$(cat ~/.bash_box/version)
+
+# Load the bash box theme
+theme_name=$(cat ~/.bash_box/enabled_theme)
+if test -n theme_name -a -e ~/.bash_box/themes/$theme_name
+then
+	source ~/.bash_box/themes/$theme_name
+else	
+	source ~/.bash_box/core/prompt
+fi
+load
+unset desc
+unset author
+
+# Load the bash box core

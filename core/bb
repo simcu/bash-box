@@ -1,0 +1,28 @@
+bb(){
+	case $1 in
+		1) 
+			echo 111
+			;;
+		*)
+			bb_help
+			;;
+	esac
+}
+
+bb_help(){
+	echo "
+Welcome to use Bash Box - The simple and useful bash toolbox!
+Version: $BASH_BOX_VERSION (latest)
+
+Usage: bb COMMAND [arg...]
+
+Commands:
+    update     Update the bashbox and installed plugins.
+    help       Show this page or command help page.
+    theme      Manage the themes.
+    plugin     Manage the Plugins.
+    search     Search from offical registry of themes and plugins.
+
+Run 'bb help COMMAND' for more information on a command.
+"
+}

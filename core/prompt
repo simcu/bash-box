@@ -1,0 +1,12 @@
+#!/bin/bash
+load(){
+	export PS1="[\t] \w \e[31m❯\e[33m❯\e[32m❯ \e[37m"
+}
+
+author(){
+	echo "simcu"
+}
+
+desc(){
+	echo "simcu simple prompt ~ You Know, very simple!"
+}

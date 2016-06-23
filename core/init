@@ -1,9 +1,9 @@
 #!/bin/bash
-BASH_BOX_VERSION=$(cat ~/.bash_box/version)
+BASH_BOX_CORE=~/.bash_box/core
+BASH_BOX_VERSION=$(cat ${BASH_BOX_CORE}/version)
 
 # Load the bash box theme
-if -e ~/.bash_box/themes/bb_actived
-then
+if -e ~/.bash_box/themes/bb_actived;then
 	source ~/.bash_box/themes/bb_actived
 else	
 	source ~/.bash_box/core/prompt
@@ -13,3 +13,4 @@ unset desc
 unset author
 
 # Load the bash box core
+source ${BASH_BOX_CORE}/init

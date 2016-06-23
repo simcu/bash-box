@@ -3,7 +3,7 @@ BASH_BOX_CORE=~/.bash_box/core
 BASH_BOX_VERSION=$(cat ${BASH_BOX_CORE}/version)
 
 # Load the bash box theme
-if -e ~/.bash_box/themes/bb_actived;then
+if test -e ~/.bash_box/themes/bb_actived;then
 	source ~/.bash_box/themes/bb_actived
 else	
 	source ~/.bash_box/core/prompt

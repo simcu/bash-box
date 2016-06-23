@@ -1,7 +1,17 @@
 #!/bin/bash
-
-#rm -rf ~/.bash_box
-mkdir ~/.bash_box
-mkdir ~/.bash_box/core
-mkdir ~/.bash_box/plugins
-mkdir ~/.bash_box/themes
+BASH_BOX_INSTALL_URL=https://raw.githubusercontent.com/simcu/bash-box/master/
+if test -d ~/.bash_box;then
+	rm -rf ~/.bash_box/core
+	mkdir ~/.bash_box/core
+	curl -s $BASH_BOX_INSTALL_URL/bb > ~/.bash_box/core/bb
+	curl -s $BASH_BOX_INSTALL_URL/init > ~/.bash_box/core/init
+	curl -s $BASH_BOX_INSTALL_URL/prompt > ~/.bash_box/core/prompt
+	curl -s $BASH_BOX_INSTALL_URL/version > ~/.bash_box/core/version
+	if test ! -d ~/.bash_box/plugins;then
+		mkdir ~/.bash_box/plugins
+	fi
+	if test ! -d ~/.bash_box/themes;then
+		mkdir ~/.bash_box/themes
+	fi	
+fi
+unset BASH_BOX_INSTALL_URL	

@@ -15,7 +15,7 @@ curl -o ~/.bash_box/core/bb ${BASH_BOX_INSTALL_URL}bb
 curl -o ~/.bash_box/core/init ${BASH_BOX_INSTALL_URL}init 
 curl -o ~/.bash_box/core/prompt ${BASH_BOX_INSTALL_URL}prompt
 curl -o ~/.bash_box/core/version ${BASH_BOX_INSTALL_URL}version
-unset BASH_BOX_INSTALL_URL	
+# unset BASH_BOX_INSTALL_URL	
 
 # if test -f ~/.bash_profile;then
 # else

@@ -1,6 +1,6 @@
 #!/bin/bash
-BASH_BOX_CORE=~/.bash_box/core
-BASH_BOX_VERSION=$(cat ${BASH_BOX_CORE}/version)
+BASH_BOX_HOME=~/.bash_box
+BASH_BOX_VERSION=$(cat ${BASH_BOX_HOME}/core/version)
 
 # Load the bash box theme
 if test -e ~/.bash_box/themes/bb_actived;then
@@ -13,4 +13,11 @@ unset desc
 unset author
 
 # Load the bash box core
-source ${BASH_BOX_CORE}/bb
+source ${BASH_BOX_HOME}/core/bb
+
+# Load all the plugins
+filelist=`ls ${BASH_BOX_HOME}/plugins`
+for file in $filelist
+do 
+	source ${BASH_BOX_HOME}/plugins/$file
+done

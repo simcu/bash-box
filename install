@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#rm -rf ~/.bash_box
+mkdir ~/.bash_box
+mkdir ~/.bash_box/core
+mkdir ~/.bash_box/plugins
+mkdir ~/.bash_box/themes

@@ -13,4 +13,4 @@ unset desc
 unset author
 
 # Load the bash box core
-source ${BASH_BOX_CORE}/init
+source ${BASH_BOX_CORE}/bb
